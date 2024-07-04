@@ -206,9 +206,9 @@ import Masonry from "masonry-layout";
 import io from "socket.io-client";
 
 let host = window.location.hostname;
-let port = window.location.port ? ":9000" : "";
+let port = window.location.port;
 let protocol = port ? "http" : "https";
-let url = `${protocol}://${host}${port}`;
+let url = `${protocol}://${host}:${port}`;
 let socket = io(url);
 
 const frappe = new FrappeApp(url);
